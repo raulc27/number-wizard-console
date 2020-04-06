@@ -7,9 +7,9 @@ using UnityEngine;
 public class NumberWizard : MonoBehaviour
 {
 
-         int max=1000;
-         int min=1;
-         int guess=500;
+         int max;
+         int min;
+         int guess;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,11 @@ public class NumberWizard : MonoBehaviour
 
     void StartGame()
     {
+
+        max=1000;
+        min=1;
+        guess=500;
+
 
         Debug.Log("Welcome to Number Wizard, yo");
         Debug.Log("Pick a number and dont tell me what it is...");
@@ -39,6 +44,7 @@ public class NumberWizard : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.UpArrow)){
             
             min=guess;
+            NextGuess();
           
             
         }
