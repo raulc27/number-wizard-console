@@ -15,6 +15,13 @@ public class NumberWizard : MonoBehaviour
     {
         
 
+        
+    }
+
+
+    void StartGame()
+    {
+
         Debug.Log("Welcome to Number Wizard, yo");
         Debug.Log("Pick a number and dont tell me what it is...");
         Debug.Log("The highest number you can pick is: "+max);
@@ -22,6 +29,8 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("Tell me if your number is higher or lower than: "+guess);
         Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = Correct");
         max=max+1;
+        
+
     }
 
     // Update is called once per frame
