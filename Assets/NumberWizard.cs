@@ -14,7 +14,7 @@ public class NumberWizard : MonoBehaviour
     void Start()
     {
         
-
+        StartGame();
         
     }
 
@@ -39,8 +39,7 @@ public class NumberWizard : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.UpArrow)){
             
             min=guess;
-            guess = (max+min)/2;
-            Debug.Log("Is it higher or lower than... "+guess);
+          
             
         }
 
@@ -48,15 +47,22 @@ public class NumberWizard : MonoBehaviour
         {
 
             max=guess;
-            guess=(max+min)/2;
-            Debug.Log("Is it higher or lower than... "+guess);
+            NextGuess();
 
         }
 
         else if(Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("I am a genius...");
+            StartGame();
         }
         
+    }
+
+    void NextGuess()
+    {
+            guess = (max+min)/2;
+            Debug.Log("Is it higher or lower than... "+guess);
+
     }
 }
